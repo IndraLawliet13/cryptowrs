@@ -1,10 +1,23 @@
 # cryptowrs
 
+![Python](https://img.shields.io/badge/Python-Automation-3776AB?logo=python&logoColor=white)
+![Target](https://img.shields.io/badge/Target-earncryptowrs.in-111827)
+![Modes](https://img.shields.io/badge/Modes-Single%20%7C%20Multi%20Coin-0F766E)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+
 Python automation scripts for the `earncryptowrs.in` faucet flow, preserved as a safe public showcase version from a private working setup.
 
 This public candidate intentionally keeps the reusable script variants while removing live wallet identifiers, downloaded browser-helper state, screenshots, and debug logs.
 
-## What is included
+## Highlights
+
+- three Python variants for similar faucet flows
+- Cloudflare-aware browser bridging in the richer variants
+- retry-aware requests session handling
+- env-based wallet and coin configuration
+- public packaging without local debug/runtime state
+
+## Included variants
 
 - `bot.py` - main single-coin variant with Cloudflare-aware browser bridge
 - `botNew.py` - alternate single-coin variant
@@ -12,13 +25,6 @@ This public candidate intentionally keeps the reusable script variants while rem
 - `requirements.txt`
 - `.env.example`
 - `LICENSE`
-
-## What is intentionally excluded
-
-- live FaucetPay wallet email
-- `latest_logs/` debug captures
-- `downloaded_files/` Selenium/runtime lock files
-- screenshots and temporary HTML artifacts
 
 ## Local configuration
 
@@ -60,6 +66,10 @@ The variants all revolve around the same general flow:
 4. use a browser-assisted bridge when requests-only access is blocked
 5. solve static captcha flows
 6. submit faucet claims and wait for cooldowns
+
+## Documentation
+
+- `docs/VARIANTS.md`
 
 ## Security notes
 
