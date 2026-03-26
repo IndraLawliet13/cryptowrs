@@ -1,5 +1,6 @@
 # cryptowrs
 
+![CI](https://img.shields.io/github/actions/workflow/status/IndraLawliet13/cryptowrs/ci.yml?branch=main&label=CI)
 ![Python](https://img.shields.io/badge/Python-Automation-3776AB?logo=python&logoColor=white)
 ![Target](https://img.shields.io/badge/Target-earncryptowrs.in-111827)
 ![Modes](https://img.shields.io/badge/Modes-Single%20%7C%20Multi%20Coin-0F766E)
@@ -17,6 +18,14 @@ This public candidate intentionally keeps the reusable script variants while rem
 - env-based wallet and coin configuration
 - public packaging without local debug/runtime state
 
+## Tech stack
+
+- Python 3
+- `requests`
+- `beautifulsoup4`
+- `seleniumbase`
+- retry-aware HTTP session handling
+
 ## Included variants
 
 - `bot.py` - main single-coin variant with Cloudflare-aware browser bridge
@@ -24,6 +33,9 @@ This public candidate intentionally keeps the reusable script variants while rem
 - `botNew2.py` - multi-coin variant for one session flow
 - `requirements.txt`
 - `.env.example`
+- `docs/VARIANTS.md`
+- `docs/QUICKSTART.md`
+- `.github/workflows/ci.yml`
 - `LICENSE`
 
 ## Local configuration
@@ -70,6 +82,14 @@ The variants all revolve around the same general flow:
 ## Documentation
 
 - `docs/VARIANTS.md`
+- `docs/QUICKSTART.md`
+- `.env.example`
+
+## Compatibility
+
+- Python 3.10+
+- Linux/macOS shell examples shown above
+- browser-assisted flow may require a local browser environment compatible with SeleniumBase
 
 ## Security notes
 
